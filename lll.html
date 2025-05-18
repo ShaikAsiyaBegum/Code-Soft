@@ -1,2 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Amma Koochi 🎉</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', cursive;
+      overflow: auto; /* ALLOW SCROLLING */
+    }
+
+    .page {
+      display: none;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5em;
+    }
+
+    .show {
+      display: flex !important;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .button {
+      margin-top: 20px;
+      background-color: white;
+      color: #ff69b4;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ffe6ec;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .quote {
+      max-width: 80%;
+      z-index: 2;
+    }
+
+    .bubble {
+      background: linear-gradient(to bottom, #a8e0ff, #70cad1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bubbles span {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: bubbleAnim 10s infinite ease-in;
+    }
+
+    @keyframes bubbleAnim {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .roses {
+      background: linear-gradient(to bottom right, #ff7eb9, #ff65a3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .petals span {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      font-size: 24px;
+      animation: petalFall 10s infinite linear;
+    }
+
+    @keyframes petalFall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .rainbow {
+      background: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .drops span {
+      position: absolute;
+      top: -30px;
+      font-size: 18px;
+      animation: dropFall 8s infinite linear;
+    }
+
+    @keyframes dropFall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .final {
+      background: #ffe4e1;
+      color: #ff1493;
+    }
+
+    .ghost {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .heartPage {
+      background: #fff0f5;
+      color: #c71585;
+      padding: 30px;
+      overflow-y: auto;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .heart {
+      font-size: 3em;
+      margin: 10px 0;
+    }
+
+    .poem {
+      font-size: 1.2em;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .poem p {
+      margin: 0.3em 0; /* LESS SPACING */
+      line-height: 1.3em; /* TIGHTER LINES */
+    }
+
+    .color1 { color: #FF1493; }
+    .color2 { color: #FF4500; }
+    .color3 { color: #32CD32; }
+    .color4 { color: #1E90FF; }
+    .color5 { color: #8A2BE2; }
+    .color6 { color: #FF69B4; }
+    .color7 { color: #FF6347; }
+    .color8 { color: #20B2AA; }
+    .color9 { color: #FFD700; }
+    .color10 { color: #DA70D6; }
+    .color11 { color: #ADFF2F; }
+    .color12 { color: #FF7F50; }
+    .color13 { color: #6A5ACD; }
+
+    .falling-elements span {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fallAnim 10s infinite linear;
+      z-index: 1;
+    }
+
+    @keyframes fallAnim {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .devil-message {
+      font-size: 1.5em;
+      margin: 20px 0;
+      cursor: pointer;
+      animation: shake 0.5s infinite alternate;
+      background-color: #ff1493;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @keyframes shake {
+      from { transform: rotate(-5deg); }
+      to { transform: rotate(5deg); }
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 10px;
+      font-size: 1em;
+      color: #c71585;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="page bubble show">
+    <div class="quote">"Your smile drifts like bubbles on a breeze — weightless joy that lifts the heart."</div>
+    <button class="button" onclick="nextPage(2)">Next</button>
+    <div class="bubbles">
+      <span style="left:10%; animation-delay:0.5s;"></span>
+      <span style="left:30%; animation-delay:1.5s;"></span>
+      <span style="left:50%; animation-delay:2.5s;"></span>
+      <span style="left:70%; animation-delay:3.5s;"></span>
+      <span style="left:20%; animation-delay:4s;"></span>
+      <span style="left:40%; animation-delay:5s;"></span>
+      <span style="left:60%; animation-delay:6s;"></span>
+      <span style="left:80%; animation-delay:7s;"></span>
+    </div>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page roses">
+    <div class="quote">"In the garden of my life, your smile is the bloom that never fades."</div>
+    <button class="button" onclick="nextPage(3)">Next</button>
+    <div class="petals">
+      <span style="left:15%; animation-delay:1s;">🌸</span>
+      <span style="left:35%; animation-delay:2s;">🌹</span>
+      <span style="left:55%; animation-delay:3s;">🌺</span>
+      <span style="left:75%; animation-delay:4s;">🌼</span>
+      <span style="left:25%; animation-delay:0.5s;">🌷</span>
+      <span style="left:45%; animation-delay:1.5s;">🌻</span>
+      <span style="left:65%; animation-delay:2.5s;">🌷</span>
+      <span style="left:85%; animation-delay:3.5s;">🌻</span>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="page rainbow">
+    <div class="quote">"A rainbow of love surrounds you today, Amma Koochi."</div>
+    <button class="button" onclick="nextPage(4)">Next</button>
+    <div class="drops">
+      <span style="left:20%; animation-delay:0.5s;">💧</span>
+      <span style="left:40%; animation-delay:1s;">💧</span>
+      <span style="left:60%; animation-delay:1.5s;">💧</span>
+      <span style="left:80%; animation-delay:2s;">💧</span>
+      <span style="left:10%; animation-delay:0.2s;">💧</span>
+      <span style="left:30%; animation-delay:0.7s;">💧</span>
+      <span style="left:50%; animation-delay:1.2s;">💧</span>
+      <span style="left:70%; animation-delay:1.7s;">💧</span>
+      <span style="left:90%; animation-delay:2.2s;">💧</span>
+    </div>
+  </div>
+
+  <!-- Page 4 -->
+  <div id="page4" class="page final">
+    <div class="ghost">👻</div>
+    <div class="quote">" May this day bring you joy, Amma Koochi, as you've always brought to me!"</div>
+    <button class="button" onclick="nextPage(5)">Next</button>
+  </div>
+
+  <!-- Heart Page (Final) -->
+  <div id="page5" class="page heartPage">
+    <div class="devil-message" onclick="playKnockSound()">👻 EXCUSE ME AMMA KOOCHI MAY I SAY SOMETHING TO YOU.</div>
+    <div class="heart">💖</div>
+    <div class="poem">
+      <p><span class="color1">H</span>arivillu lo unde andamaina varnala samuham</p>
+      <p><span class="color2">A</span>ve chitramai kunchene takithe o adbhutam</p>
+      <p><span class="color3">P</span>alu rakala varna sobhitam</p>
+      <p><span class="color4">P</span>anchene chakkati kanuvindhu sammelanam</p>
+      <p><span class="color5">Y</span>edu rangula vana kanulani takithe ananadam</p>
+      <p><span class="color6">B</span>angalakathamlo taakachu daani prathibimbam</p>
+      <p><span class="color7">I</span>ndra prastha adbhuta soyagam</p>
+      <p><span class="color8">R</span>oopulone o danusuu akaram</p>
+      <p><span class="color9">T</span>arinche prathi sundara nayanam</p>
+      <p><span class="color10">H</span>attukune avakasam ravalane aasha na sontham</p>
+      <p><span class="color11">D</span>ari cherina aa talape oo sira aaksharam</p>
+      <p><span class="color12">A</span>lavokaga jare oo sogasaina kavitvam</p>
+      <p><span class="color13">Y</span>adruchukame na ee aaksharala likitham</p>
+    </div>
+    <button class="button">Happy Birthday Amma Koochi!</button>
+   
+
+    <div class="falling-elements"></div>
+  </div>
+
+  <audio id="knockSound" src="https://assets.mixkit.co/sfx/preview/mixkit-door-knob-571.mp3" preload="auto"></audio>
+
+  <script>
+    let currentPage = 0;
+    const pages = document.querySelectorAll('.page');
+
+    function nextPage(pageNumber) {
+      pages[currentPage].classList.remove('show');
+      currentPage = pageNumber - 1;
+      pages[currentPage].classList.add('show');
+    }
+
+    function playKnockSound() {
+      const knockSound = document.getElementById('knockSound');
+      knockSound.currentTime = 0;
+      knockSound.play();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const fallingContainer = document.querySelector('.falling-elements');
+      const emojis = ['💖'];
+
+      for (let i = 0; i < 30; i++) {
+        const span = document.createElement('span');
+        span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDelay = Math.random() * 15 + 's';
+        span.style.animationDuration = 5 + Math.random() * 10 + 's';
+        fallingContainer.appendChild(span);
+      }
+    });
+  </script>
+
+</body>
+</html>
 
 
